@@ -10,26 +10,27 @@ import "@fontsource/roboto/700.css";
 import "./index.css";
 import App from "./App.jsx";
 import { ThemeProvider, createTheme } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { purple } from "@mui/material/colors";
 
 const theme = createTheme({
-   palette: {
-      secondary: red,
-   },
-   typography: {
-      fontFamily: "Quicksand",
-      fontWeightLight: 400,
-      fontWeightRegular: 500,
-      fontWeightMedium: 600,
-      fontWeightBold: 700,
-   },
+  palette: {
+    secondary: purple,
+  },
+
+  typography: {
+    fontFamily: "Quicksand",
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
+    fontWeightBold: 700,
+  },
 });
 
 createRoot(document.getElementById("root")).render(
-   <StrictMode>
-      <CssBaseline />
-      <ThemeProvider theme={theme}>
-         <App />
-      </ThemeProvider>
-   </StrictMode>
+  <StrictMode>
+    <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </StrictMode>
 );
